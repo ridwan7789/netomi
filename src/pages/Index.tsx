@@ -8,6 +8,7 @@ import UseCaseSection from "@/components/home/UseCaseSection";
 import TokenomicsSection from "@/components/home/TokenomicsSection";
 import RoadmapSection from "@/components/home/RoadmapSection";
 import ClosingSection from "@/components/home/ClosingSection";
+import PartnersSection from "@/components/home/PartnersSection";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <SolutionSection />
         <ArchitectureSection />
         <UseCaseSection />
+        <PartnersSection />
         <TokenomicsSection />
         <RoadmapSection />
         <ClosingSection />
