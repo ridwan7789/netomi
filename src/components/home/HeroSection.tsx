@@ -1,6 +1,7 @@
 import { ArrowRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import netomiLogo from "@/assets/netomi-logo.jpg";
+import CopyableAddress3D from "@/components/ui/CopyableAddress3D";
 
 const HeroSection = () => {
   return (
@@ -86,8 +87,17 @@ const HeroSection = () => {
             </a>
           </div>
 
+          {/* Official CA */}
+          <div className="mt-8 fade-up fade-up-delay-5">
+            <CopyableAddress3D
+              address="0x6D9Bb8BdB023Ae16eB567e7F24358D9eF8048eEf"
+              label="$NTM Official CA"
+              showFullAddress={true}
+            />
+          </div>
+
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 fade-up fade-up-delay-5">
+          <div className="grid grid-cols-3 gap-8 mt-12 fade-up fade-up-delay-6">
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-primary neon-text">10M</p>
               <p className="text-muted-foreground text-sm mt-1">Total Supply</p>

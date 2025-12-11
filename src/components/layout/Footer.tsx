@@ -1,5 +1,6 @@
 import { Github, Twitter, MessageCircle, Globe, ExternalLink } from "lucide-react";
 import netomiLogo from "@/assets/netomi-logo.jpg";
+import CopyableAddress from "@/components/ui/CopyableAddress";
 
 const Footer = () => {
   return (
@@ -45,6 +46,13 @@ const Footer = () => {
               >
                 <Globe size={18} />
               </a>
+            </div>
+            {/* Official CA */}
+            <div className="mt-6">
+              <CopyableAddress
+                address="0x6D9Bb8BdB023Ae16eB567e7F24358D9eF8048eEf"
+                label="$NTM Official CA"
+              />
             </div>
           </div>
 
