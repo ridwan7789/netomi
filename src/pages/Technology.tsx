@@ -252,7 +252,7 @@ const Technology = () => {
                 payments into your application.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" className="btn-primary">
+                <a href="https://docs.netomi.site" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Read Documentation
                 </a>
                 <a href="#" className="btn-outline">

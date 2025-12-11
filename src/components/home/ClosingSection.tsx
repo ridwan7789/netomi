@@ -27,7 +27,9 @@ const ClosingSection = () => {
               <ArrowRight size={20} />
             </a>
             <a
-              href="#"
+              href="https://docs.netomi.site"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline inline-flex items-center gap-2 justify-center text-lg px-8 py-4"
             >
               View Documentation

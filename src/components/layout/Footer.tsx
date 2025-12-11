@@ -58,7 +58,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="https://docs.netomi.site" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   Documentation
                 </a>
               </li>

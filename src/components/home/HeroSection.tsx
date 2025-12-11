@@ -80,7 +80,7 @@ const HeroSection = () => {
               Explore Technology
               <ArrowRight size={18} />
             </Link>
-            <a href="#" className="btn-outline inline-flex items-center gap-2 justify-center focusable">
+            <a href="https://docs.netomi.site" target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2 justify-center focusable">
               <FileText size={18} />
               Read Documentation
             </a>
