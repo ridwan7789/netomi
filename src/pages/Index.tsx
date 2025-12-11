@@ -5,14 +5,16 @@ import ProblemSection from "@/components/home/ProblemSection";
 import SolutionSection from "@/components/home/SolutionSection";
 import ArchitectureSection from "@/components/home/ArchitectureSection";
 import UseCaseSection from "@/components/home/UseCaseSection";
+import PartnersSection from "@/components/home/PartnersSection";
 import TokenomicsSection from "@/components/home/TokenomicsSection";
 import RoadmapSection from "@/components/home/RoadmapSection";
 import ClosingSection from "@/components/home/ClosingSection";
-import PartnersSection from "@/components/home/PartnersSection";
+import ParticlesBackground from "@/components/ui/ParticlesBackground";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ParticlesBackground />
       <Navbar />
       <main>
         <HeroSection />

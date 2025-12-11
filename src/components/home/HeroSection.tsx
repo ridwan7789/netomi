@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(147_71%_44%_/_0.08)_0%,_transparent_50%)]" />
       <div className="absolute inset-0 bg-grid-pattern bg-[size:60px_60px] opacity-20" />
-      
+
       {/* Animated Neon Lines */}
       <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -76,11 +76,11 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-up fade-up-delay-4">
-            <Link to="/technology" className="btn-primary inline-flex items-center gap-2 justify-center">
+            <Link to="/technology" className="btn-primary inline-flex items-center gap-2 justify-center focusable">
               Explore Technology
               <ArrowRight size={18} />
             </Link>
-            <a href="#" className="btn-outline inline-flex items-center gap-2 justify-center">
+            <a href="#" className="btn-outline inline-flex items-center gap-2 justify-center focusable">
               <FileText size={18} />
               Read Documentation
             </a>

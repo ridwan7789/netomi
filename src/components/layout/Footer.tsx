@@ -1,4 +1,4 @@
-import { Github, Twitter, MessageCircle } from "lucide-react";
+import { Github, Twitter, MessageCircle, Globe, ExternalLink } from "lucide-react";
 import netomiLogo from "@/assets/netomi-logo.jpg";
 
 const Footer = () => {
@@ -22,22 +22,28 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+                href="https://x.com/NetomiNetwork"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300 focusable"
               >
                 <Twitter size={18} />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-              >
-                <Github size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+                href="https://t.me/NetomiMain"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300 focusable"
               >
                 <MessageCircle size={18} />
+              </a>
+              <a
+                href="https://docs.netomi.site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300 focusable"
+              >
+                <Globe size={18} />
               </a>
             </div>
           </div>
@@ -78,12 +84,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="https://x.com/NetomiNetwork" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   Twitter
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="https://t.me/NetomiMain" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   Telegram
                 </a>
               </li>

@@ -42,7 +42,7 @@
     --neon-glow-strong: 0 0 40px hsl(147 71% 44% / 0.6);
     --dark-surface: 0 0% 4%;
     --darker-surface: 0 0% 2%;
-    
+
     /* Gradients */
     --gradient-radial: radial-gradient(ellipse at center, hsl(147 71% 44% / 0.15) 0%, transparent 70%);
     --gradient-hero: radial-gradient(circle at 50% 0%, hsl(147 71% 44% / 0.12) 0%, transparent 50%);
@@ -127,6 +127,11 @@
 
   .section-subtitle {
     @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
+  }
+
+  /* Accessibility improvements */
+  .focusable {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
   }
 }
 

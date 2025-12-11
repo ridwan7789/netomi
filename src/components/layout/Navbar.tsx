@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import netomiLogo from "@/assets/netomi-logo.jpg";
+import UnderDevelopmentModal from "@/components/ui/UnderDevelopmentModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -14,12 +16,17 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleLaunchAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 focusable">
             <img
               src={netomiLogo}
               alt="Netomi Logo"
@@ -36,7 +43,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-medium transition-all duration-300 ${
+                className={`font-medium transition-all duration-300 focusable ${
                   isActive(link.path)
                     ? "text-primary neon-text"
                     : "text-muted-foreground hover:text-foreground"
@@ -45,17 +52,17 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="#"
-              className="btn-primary text-sm"
+            <button
+              onClick={handleLaunchAppClick}
+              className="btn-primary text-sm focusable"
             >
               Launch App
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground focusable"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -71,7 +78,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-medium py-2 transition-all duration-300 ${
+                className={`font-medium py-2 transition-all duration-300 focusable ${
                   isActive(link.path)
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -81,15 +88,21 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="#"
-              className="btn-primary text-sm text-center mt-2"
+            <button
+              onClick={handleLaunchAppClick}
+              className="btn-primary text-sm text-center mt-2 focusable"
             >
               Launch App
-            </a>
+            </button>
           </div>
         </div>
       )}
+
+      {/* Under Development Modal */}
+      <UnderDevelopmentModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </nav>
   );
 };

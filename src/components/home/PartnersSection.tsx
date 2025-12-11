@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
+import bsclabsLogo from '@/assets/bsclabs.png';
+import chainlinkLogo from '@/assets/chainlink.png';
+import cryptofundLogo from '@/assets/cryptofund.jpeg';
+import defiprotocolLogo from '@/assets/defiprotocol.jpeg';
+import layer2Logo from '@/assets/layer2.webp';
+import web3foundationLogo from '@/assets/web3foundation.png';
+import zkventuresLogo from '@/assets/zkventures.png';
 
 const partners = [
-  { name: 'BSC Labs', category: 'Infrastructure' },
-  { name: 'ZK Ventures', category: 'Investor' },
-  { name: 'Privacy DAO', category: 'Partner' },
-  { name: 'ChainLink', category: 'Infrastructure' },
-  { name: 'Layer2 Capital', category: 'Investor' },
-  { name: 'DeFi Alliance', category: 'Partner' },
-  { name: 'Crypto Fund', category: 'Investor' },
-  { name: 'Web3 Foundation', category: 'Partner' },
+  { name: 'BSC Labs', category: 'Infrastructure', logo: bsclabsLogo },
+  { name: 'ZK Ventures', category: 'Investor', logo: zkventuresLogo },
+  { name: 'DeFi Alliance', category: 'Partner', logo: defiprotocolLogo },
+  { name: 'ChainLink', category: 'Infrastructure', logo: chainlinkLogo },
+  { name: 'Layer2 Capital', category: 'Investor', logo: layer2Logo },
+  { name: 'Crypto Fund', category: 'Investor', logo: cryptofundLogo },
+  { name: 'Web3 Foundation', category: 'Partner', logo: web3foundationLogo },
 ];
 
 const PartnersSection = () => {
@@ -25,7 +31,7 @@ const PartnersSection = () => {
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-green/5 to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-neon-green text-sm font-medium tracking-wider uppercase mb-4 block">
@@ -45,9 +51,9 @@ const PartnersSection = () => {
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
           {/* Gradient Fade Right */}
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-          
+
           <div className="overflow-hidden py-8">
-            <div 
+            <div
               className="flex gap-8 transition-transform duration-100"
               style={{ transform: `translateX(-${offset}px)` }}
             >
@@ -56,16 +62,17 @@ const PartnersSection = () => {
                 <div
                   key={index}
                   className="flex-shrink-0 w-48 h-24 rounded-xl border border-border/30 bg-card/30 backdrop-blur-sm
-                           flex flex-col items-center justify-center gap-2 hover:border-neon-green/50 
+                           flex flex-col items-center justify-center gap-2 hover:border-neon-green/50
                            hover:bg-neon-green/5 transition-all duration-300 group"
                 >
-                  {/* Placeholder Logo */}
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-green/20 to-neon-green/5 
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-green/20 to-neon-green/5
                                 border border-neon-green/30 flex items-center justify-center
-                                group-hover:border-neon-green/60 transition-colors">
-                    <span className="text-neon-green font-bold text-lg">
-                      {partner.name.charAt(0)}
-                    </span>
+                                group-hover:border-neon-green/60 transition-colors p-1 focusable">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} Logo`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <span className="text-foreground font-medium text-sm">{partner.name}</span>
                   <span className="text-muted-foreground text-xs">{partner.category}</span>

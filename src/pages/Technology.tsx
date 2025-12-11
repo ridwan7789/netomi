@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ParticlesBackground from "@/components/ui/ParticlesBackground";
 import { Cpu, Shield, Network, CheckCircle, Smartphone } from "lucide-react";
 
 const techSections = [
@@ -78,6 +79,7 @@ const techSections = [
 const Technology = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ParticlesBackground />
       <Navbar />
       <main className="pt-20">
         {/* Hero Section */}
@@ -155,7 +157,7 @@ const Technology = () => {
                   <div className="relative">
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl" />
-                    
+
                     {/* Card */}
                     <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-card to-background border border-border/50">
                       {/* Animated Icon */}
@@ -165,7 +167,7 @@ const Technology = () => {
                           <section.icon className="w-16 h-16 text-primary" />
                         </div>
                       </div>
-                      
+
                       {/* Decorative Lines */}
                       <svg
                         className="w-full h-32 opacity-30"
@@ -209,7 +211,7 @@ const Technology = () => {
                           style={{ animationDelay: "0.5s" }}
                         />
                       </svg>
-                      
+
                       {/* Stats */}
                       <div className="grid grid-cols-2 gap-4 text-center">
                         <div className="p-4 rounded-xl bg-background/50">
